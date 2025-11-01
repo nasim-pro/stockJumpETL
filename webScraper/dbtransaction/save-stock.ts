@@ -2,6 +2,7 @@
 import axios from "axios";
 import type { StockData } from "../types.ts";
 import { config } from "dotenv";
+import { saveToMongo } from "./savetoMongodb.ts";
 config()
 
 const API_BASE=process.env.API_BASE
@@ -106,6 +107,7 @@ export async function storeResultStock(stockData: StockData): Promise<void> {
         
         // Call backend API
         await axios.post(`${API_BASE}/api/save-result`, storeObj);
+        await saveToMongo(storeObj);
     } catch (error: any) {
         console.error("Error storing stock:", error.message);
         // throw error;
