@@ -1,30 +1,6 @@
 import type { StockData } from "../types.ts";
 import { sendTeleGramMessage } from "./sendTelegramMessage.ts";
 
-// interface GrowthRate {
-//     oldGrowthRate?: number;
-//     newGrowthRate?: number;
-//     jumpPercent?: number;
-// }
-
-// interface Recommendation {
-//     EPS?: GrowthRate;
-//     Sales?: GrowthRate;
-//     PAT?: GrowthRate;
-//     OP?: GrowthRate;
-//     PE?: number;
-//     PEG?: number;
-//     decision?: string;
-// }
-
-// interface Company {
-//     ticker?: string;
-//     stockName?: string;
-//     recommendation: Recommendation;
-//     roe?: number;
-//     DPS?: number | string;
-//     quarters?: string[];
-// }
 
 /**
  * Helper to safely get values or return fallback
