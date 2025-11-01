@@ -1,7 +1,6 @@
 import type { StockData } from "../types.ts";
 import { sendTeleGramMessage } from "./sendTelegramMessage.ts";
 
-
 /**
  * Sends a formatted Telegram message listing all companies whose results were released.
  * @param data - Array of stock/company data objects
