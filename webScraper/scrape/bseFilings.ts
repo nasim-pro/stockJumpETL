@@ -97,6 +97,7 @@ export async function fetchBSEFinancialResults(): Promise<any[] | null> {
     const toDate = formatDateYYYYMMDD(yesterday);
 
     const url = `https://api.bseindia.com/BseIndiaAPI/api/AnnSubCategoryGetData/w?pageno=${page}&strCat=Result&strPrevDate=${fromDate}&strScrip=&strSearch=P&strToDate=${toDate}&strType=C&subcategory=Financial+Results`;
+    console.log("BSE Url", url);
 
     try {
         await sleep(700);
