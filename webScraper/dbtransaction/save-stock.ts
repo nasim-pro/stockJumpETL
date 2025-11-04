@@ -103,7 +103,7 @@ export async function storeResultStock(stockData: StockData): Promise<void> {
             
         };
 
-        console.log("storing stock object", JSON.stringify(storeObj, null, 2));
+        console.log("storing stock object", storeObj.stockName);
         
         // Call backend API
         await axios.post(`${API_BASE}/api/save-result`, storeObj);
